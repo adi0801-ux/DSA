@@ -60,6 +60,7 @@ node* kthAncestor(node *root, int &k , int node ){
 int main() {
     node *root=NULL;
     root = buildTree(root);
-    kthAncestor(root, 3, 3);
+    int k=3;
+    kthAncestor(root, k, 3);
     return 0;
 }

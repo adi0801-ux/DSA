@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(DSA500
 
-        "kth ancestor.cpp"
+
+        String/String_reverseWordsInString.cpp
 
 )
