@@ -17,7 +17,6 @@ void reverseWords(string s) {
             temp="";
         }
     }
-    //akkaka
     while(!st.empty()){
         temp.append(st.top());
         st.pop();
