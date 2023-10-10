@@ -7,6 +7,6 @@ add_executable(DSA500
 
 
 
-        Graph/Graph_NumberOfEnclaves.cpp
+        Graph/Graph_FindSafeState.cpp
 
 )
