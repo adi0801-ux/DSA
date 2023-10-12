@@ -49,8 +49,7 @@
 			},
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
@@ -83,8 +82,7 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
@@ -93,13 +91,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Graph/Graph_WorldLadder1.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Graph/Graph_WordLadder2.cpp",
+			"path" : "Graph/Graph_DijkstraPQ.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

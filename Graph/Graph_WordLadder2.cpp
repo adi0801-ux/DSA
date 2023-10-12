@@ -10,41 +10,88 @@ using namespace std;
 
 class Solution {
 public:
-    int wordLadder1(string startWord, string targetWord, vector<string>wordList){
-        queue<pair<string, int>>q;
-        q.push({startWord, 1});
-        unordered_set<string>st(wordList.begin(), wordList.end());
-        st.erase(startWord);
+    vector<vector<string>>wordLadder2(string beginWord, string targetWord, vector<string>wordList){
+        vector<vector<string>>ans;
+        queue<vector<string>>q;
+        vector<string>usedOnLevel;
+        usedOnLevel.push_back(beginWord);
+        unordered_set<string>st( wordList.begin(), wordList.end());
+        q.push({beginWord});
+        int level=0;
         while(!q.empty()){
-            string word=q.front().first;
-            int steps= q.front().second;
+            vector<string>vec=q.front();
             q.pop();
-            if(word==targetWord)return steps;
+            if(vec.size()>level){
+                level++;
+                for(auto it:usedOnLevel){
+                    st.erase(it);
+                }
+            }
+            string word=vec.back();
+            if(word==targetWord){
+                if(ans.size()==0){
+                    ans.push_back(vec);
+                }
+                else if(ans[0].size()==vec.size()){
+                    ans.push_back(vec);
+                }
+            }
             for(int i=0;i<word.size();i++){
-                char original = word[i];
+                char original=word[i];
                 for(char ch='a';ch<='z';ch++){
                     word[i]=ch;
                     if(st.find(word)!=st.end()){
-                        q.push({word, steps+1});
-                        st.erase(word);
+                        vec.push_back(word);
+                        q.push(vec);
+                        usedOnLevel.push_back(word);
+                        vec.pop_back();
                     }
                 }
                 word[i]=original;
             }
         }
-        return 0;
+        return ans;
     }
 
 };
 
 
-
+//bool comp(vector<string> a, vector<string> b)
+//{
+//    string x = "", y = "";
+//    for (string i : a)
+//        x += i;
+//    for (string i : b)
+//        y += i;
+//
+//    return x < y;
+//}
 
 int main() {
     vector<string> wordList = {"des", "der", "dfr", "dgt", "dfs"};
-    string startWord = "der", targetWord = "xyz";
+    string startWord = "der", targetWord = "dfs";
 
     Solution obj;
-    cout<<obj.wordLadder1(startWord, targetWord, wordList);
+    vector<vector<string>>ans =obj.wordLadder2(startWord, targetWord, wordList);
+//    for(auto it:v){
+//        for(auto i:it){
+//            cout<<i<<" ";
+//        }
+//        cout<<endl;
+//    }
+    if(ans.size() == 0)
+        cout << -1 << endl;
+    else
+    {
+//        sort(ans.begin(), ans.end(), comp);
+        for (int i = 0; i < ans.size(); i++)
+        {
+            for (int j = 0; j < ans[i].size(); j++)
+            {
+                cout << ans[i][j] << " ";
+            }
+            cout << endl;
+        }
+    }
     return 0;
 }
