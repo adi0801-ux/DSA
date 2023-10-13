@@ -7,6 +7,6 @@ add_executable(DSA500
 
 
 
-        Graph/Graph_minMultToReachEnd.cpp
+        Graph/Graph_FloydWarshal.cpp
 
 )
