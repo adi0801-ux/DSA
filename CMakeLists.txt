@@ -7,6 +7,6 @@ add_executable(DSA500
 
 
 
-        Graph/Graph_PathWithMinEffort.cpp
+        Graph/Graph_minMultToReachEnd.cpp
 
 )
