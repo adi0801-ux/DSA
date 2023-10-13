@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(DSA500
 
 
-        Graph/Graph_DijkstraPQ.cpp
+
+        Graph/Graph_PathWithMinEffort.cpp
 
 )
