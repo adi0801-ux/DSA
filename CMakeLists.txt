@@ -7,6 +7,6 @@ add_executable(DSA500
 
 
 
-        Graph/Graph_UnionByRankSize.cpp
+        Graph/Graph_MinNoOpMakeGraphConnected.cpp
 
 )
