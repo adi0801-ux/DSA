@@ -7,6 +7,6 @@ add_executable(DSA500
 
 
 
-        Graph/Graph_MinNoOpMakeGraphConnected.cpp
+        Graph/Graph_MakingLargeIsland.cpp
 
 )
