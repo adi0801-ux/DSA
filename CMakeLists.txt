@@ -7,6 +7,6 @@ add_executable(DSA500
 
 
 
-        Graph/Graph_MakingLargeIsland.cpp
+        Graph/Graph_MostStonesRemoved.cpp
 
 )

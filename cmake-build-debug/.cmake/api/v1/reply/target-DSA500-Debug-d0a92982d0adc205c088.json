@@ -91,7 +91,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Graph/Graph_MakingLargeIsland.cpp",
+			"path" : "Graph/Graph_MostStonesRemoved.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
