@@ -91,7 +91,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Graph/Graph_Kosaraju.cpp",
+			"path" : "Graph/Graph_Bridge.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
