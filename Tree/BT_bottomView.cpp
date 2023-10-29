@@ -28,7 +28,7 @@ node *buildTree(node *root){
     return root;
 }
 
-vector<int> topView(node *root, vector<int>&ans){
+vector<int> bottomView(node *root, vector<int>&ans){
     if(root==NULL)return ans;
     map<int, int>mpp;
     queue<pair<node*, int>> q;
@@ -52,7 +52,8 @@ int main() {
     node *root=NULL;
     vector<int>ans;
     root = buildTree(root);
-    topView(root, ans);
-    for(auto it:ans)cout<<it;
+    bottomView(root, ans);
+    for(auto it:ans)cout<<it<<" ";
     return 0;
 }
+1 2 3 4 null,5,6,null,null,7

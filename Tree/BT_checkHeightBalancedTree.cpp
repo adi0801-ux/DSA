@@ -27,20 +27,36 @@ node *buildTree(node *root){
     root->right= buildTree(root->right);
     return root;
 }
-int height(node* root){
+////OPTIMISED APPROACH O(N)
+int dfsHt(node *root){
     if(root==NULL)return 0;
-    int lh = height(root->left);
-    int rh = height(root->right);
+    int lh= dfsHt(root->left);
+    if (lh==-1)return -1;
+    int rh= dfsHt(root->right);
+    if(rh==-1)return -1;
+    if(abs(lh-rh)>1)return -1;
     return max(lh, rh)+1;
 }
-bool checkHt(node* root){
-    if(root==NULL)return true;
-    bool left=checkHt(root->left);
-    bool right= checkHt(root->right);
-    bool diff=abs(height(root->left)-height(root->right))<=0;
-    if(left && right && diff)return true;
+bool checkHt(node *root){
+    if(dfsHt(root)!=-1)return true;
     else return false;
 }
+///BRUTE FORCE TC-0(N2)
+//int height(node* root){
+//    if(root==NULL)return 0;
+//    int lh = height(root->left);
+//    int rh = height(root->right);
+//    return max(lh, rh)+1;
+//}
+//bool checkHt(node* root){
+//    if(root==NULL)return true;
+//    bool left=checkHt(root->left);
+//    bool right= checkHt(root->right);
+//    bool diff=abs(height(root->left)-height(root->right))<=0;
+//    if(left && right && diff)return true;
+//    else return false;
+//}
+//3 9 -1 -1 20 15 -1 -1 7 -1 -1
 int main() {
     node *root=NULL;
     root = buildTree(root);
