@@ -1,6 +1,8 @@
 //
-// Created by Aditya Chauhan on 28/08/23.
+// Created by Aditya Chauhan on 05/11/23.
 //
+
+
 #include<bits/stdc++.h>
 using namespace std;
 class node{
@@ -27,37 +29,24 @@ node *buildTree(node *root){
     root->right= buildTree(root->right);
     return root;
 }
+int solve(node* root, int &maxi){
+    if(root==NULL)return 0;
+    int lsum=max(0,solve(root->left, maxi));
+    int rsum=max(0, solve(root->right, maxi));
+    maxi=max(maxi , root->data+lsum+rsum);
+    return root->data+max(lsum , rsum);
 
-//***********OPTIMISED***********
-void flatten(node* root){
-node* cur=root;
-while(cur!=NULL){
-if(cur->left!=NULL){
-node* prev=cur->left;
-while(prev->right){
-prev=prev->right;
 }
-prev->right=cur->right;
-cur->right=cur->left;
-cur->left=NULL;
+int maxPathSum(node* root) {
+    int maxi=0;
+    solve(root, maxi);
+    return maxi;
 }
-cur=cur->right;
-}
-}
-//***********BRUTE FORCE************
-//    void flatten(node* root, node* &prev) {
-//        if(root==NULL)return;
-//        flatten(root->right, prev);
-//        flatten(root->left, prev);
-//        root->right=prev;
-//        root->left=NULL;
-//        prev=root;
-//    }
 
 int main() {
     node *root=NULL;
 //    node* prev=NULL;
     root = buildTree(root);
-    flatten(root);
+    maxPathSum(root);
     return 0;
 }

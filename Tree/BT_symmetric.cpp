@@ -1,5 +1,5 @@
 //
-// Created by Aditya Chauhan on 28/08/23.
+// Created by Aditya Chauhan on 07/11/23.
 //
 #include<bits/stdc++.h>
 using namespace std;
@@ -28,32 +28,14 @@ node *buildTree(node *root){
     return root;
 }
 
-//***********OPTIMISED***********
-void flatten(node* root){
-node* cur=root;
-while(cur!=NULL){
-if(cur->left!=NULL){
-node* prev=cur->left;
-while(prev->right){
-prev=prev->right;
+bool isSymmetric(node*root){
+    return Equivalent(root->left, root->right);
 }
-prev->right=cur->right;
-cur->right=cur->left;
-cur->left=NULL;
+bool Equivalent(node*left, node*right){
+    if(!left || !right)return left=right;
+    else if(left->data != right->data)return false;
+    else return Equivalent(left->left, right->right) && Equivalent(left->right,right->left);
 }
-cur=cur->right;
-}
-}
-//***********BRUTE FORCE************
-//    void flatten(node* root, node* &prev) {
-//        if(root==NULL)return;
-//        flatten(root->right, prev);
-//        flatten(root->left, prev);
-//        root->right=prev;
-//        root->left=NULL;
-//        prev=root;
-//    }
-
 int main() {
     node *root=NULL;
 //    node* prev=NULL;
