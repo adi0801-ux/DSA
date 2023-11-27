@@ -4,8 +4,9 @@ project(DSA500)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(DSA500
-
-
-        DP/DP_01knapsack.cpp
+    DP/DP_countSubset.cpp
+        DP/DP_minSubsetDiff.cpp
+        DP/DP_countSubsetWithGivenDiff.cpp
+        DP/DP_targetSum.cpp
 
 )
