@@ -4,9 +4,9 @@ project(DSA500)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(DSA500
-    DP/DP_countSubset.cpp
-        DP/DP_minSubsetDiff.cpp
-        DP/DP_countSubsetWithGivenDiff.cpp
-        DP/DP_targetSum.cpp
+
+        DP/DP_rodCutting.cpp
+        DP/DP_coinChange2.cpp
+        DP/DP_coinChange.cpp
 
 )

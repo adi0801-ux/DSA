@@ -51,8 +51,7 @@
 			[
 				0,
 				1,
-				2,
-				3
+				2
 			]
 		}
 	],
@@ -87,8 +86,7 @@
 			[
 				0,
 				1,
-				2,
-				3
+				2
 			]
 		}
 	],
@@ -97,25 +95,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "DP/DP_countSubset.cpp",
+			"path" : "DP/DP_rodCutting.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "DP/DP_minSubsetDiff.cpp",
+			"path" : "DP/DP_coinChange2.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "DP/DP_countSubsetWithGivenDiff.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "DP/DP_targetSum.cpp",
+			"path" : "DP/DP_coinChange.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

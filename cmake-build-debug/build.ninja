@@ -49,26 +49,20 @@ cmake_ninja_workdir = /Users/adityachauhan/CLionProjects/DSA500/cmake-build-debu
 
 build cmake_object_order_depends_target_DSA500: phony || CMakeFiles/DSA500.dir
 
-build CMakeFiles/DSA500.dir/DP/DP_countSubset.cpp.o: CXX_COMPILER__DSA500_unscanned_Debug /Users/adityachauhan/CLionProjects/DSA500/DP/DP_countSubset.cpp || cmake_object_order_depends_target_DSA500
-  DEP_FILE = CMakeFiles/DSA500.dir/DP/DP_countSubset.cpp.o.d
+build CMakeFiles/DSA500.dir/DP/DP_rodCutting.cpp.o: CXX_COMPILER__DSA500_unscanned_Debug /Users/adityachauhan/CLionProjects/DSA500/DP/DP_rodCutting.cpp || cmake_object_order_depends_target_DSA500
+  DEP_FILE = CMakeFiles/DSA500.dir/DP/DP_rodCutting.cpp.o.d
   FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.1 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/DSA500.dir
   OBJECT_FILE_DIR = CMakeFiles/DSA500.dir/DP
 
-build CMakeFiles/DSA500.dir/DP/DP_minSubsetDiff.cpp.o: CXX_COMPILER__DSA500_unscanned_Debug /Users/adityachauhan/CLionProjects/DSA500/DP/DP_minSubsetDiff.cpp || cmake_object_order_depends_target_DSA500
-  DEP_FILE = CMakeFiles/DSA500.dir/DP/DP_minSubsetDiff.cpp.o.d
+build CMakeFiles/DSA500.dir/DP/DP_coinChange2.cpp.o: CXX_COMPILER__DSA500_unscanned_Debug /Users/adityachauhan/CLionProjects/DSA500/DP/DP_coinChange2.cpp || cmake_object_order_depends_target_DSA500
+  DEP_FILE = CMakeFiles/DSA500.dir/DP/DP_coinChange2.cpp.o.d
   FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.1 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/DSA500.dir
   OBJECT_FILE_DIR = CMakeFiles/DSA500.dir/DP
 
-build CMakeFiles/DSA500.dir/DP/DP_countSubsetWithGivenDiff.cpp.o: CXX_COMPILER__DSA500_unscanned_Debug /Users/adityachauhan/CLionProjects/DSA500/DP/DP_countSubsetWithGivenDiff.cpp || cmake_object_order_depends_target_DSA500
-  DEP_FILE = CMakeFiles/DSA500.dir/DP/DP_countSubsetWithGivenDiff.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.1 -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/DSA500.dir
-  OBJECT_FILE_DIR = CMakeFiles/DSA500.dir/DP
-
-build CMakeFiles/DSA500.dir/DP/DP_targetSum.cpp.o: CXX_COMPILER__DSA500_unscanned_Debug /Users/adityachauhan/CLionProjects/DSA500/DP/DP_targetSum.cpp || cmake_object_order_depends_target_DSA500
-  DEP_FILE = CMakeFiles/DSA500.dir/DP/DP_targetSum.cpp.o.d
+build CMakeFiles/DSA500.dir/DP/DP_coinChange.cpp.o: CXX_COMPILER__DSA500_unscanned_Debug /Users/adityachauhan/CLionProjects/DSA500/DP/DP_coinChange.cpp || cmake_object_order_depends_target_DSA500
+  DEP_FILE = CMakeFiles/DSA500.dir/DP/DP_coinChange.cpp.o.d
   FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.1 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/DSA500.dir
   OBJECT_FILE_DIR = CMakeFiles/DSA500.dir/DP
@@ -81,7 +75,7 @@ build CMakeFiles/DSA500.dir/DP/DP_targetSum.cpp.o: CXX_COMPILER__DSA500_unscanne
 #############################################
 # Link the executable DSA500
 
-build DSA500: CXX_EXECUTABLE_LINKER__DSA500_Debug CMakeFiles/DSA500.dir/DP/DP_countSubset.cpp.o CMakeFiles/DSA500.dir/DP/DP_minSubsetDiff.cpp.o CMakeFiles/DSA500.dir/DP/DP_countSubsetWithGivenDiff.cpp.o CMakeFiles/DSA500.dir/DP/DP_targetSum.cpp.o
+build DSA500: CXX_EXECUTABLE_LINKER__DSA500_Debug CMakeFiles/DSA500.dir/DP/DP_rodCutting.cpp.o CMakeFiles/DSA500.dir/DP/DP_coinChange2.cpp.o CMakeFiles/DSA500.dir/DP/DP_coinChange.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.1
   OBJECT_DIR = CMakeFiles/DSA500.dir
   POST_BUILD = :
